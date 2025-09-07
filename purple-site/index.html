@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Purple: Creativity, Mystery, and Majesty</title>
+    <meta name="description" content="Explore the color purple: its science, history, culture, psychology, shades, and an interactive Purple Lab to create your perfect hue.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:title" content="All About Purple">
+    <meta property="og:description" content="Science, history, culture, psychology, curated shades, and an interactive Purple Lab.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="#top" aria-label="Home">Purple</a>
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#science">Science</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#psychology">Psychology</a></li>
+          <li><a href="#shades">Shades</a></li>
+          <li><a class="cta" href="#lab">Purple Lab</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="top" class="hero">
+      <div class="container hero-inner">
+        <h1>The Color Purple</h1>
+        <p>From royal robes to galaxies, purple blends the passion of red and the calm of blue. Dive into its science, culture, and psychology—then craft your own perfect purple in the Lab.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#lab">Open Purple Lab</a>
+          <a class="button ghost" href="#shades">Browse Shades</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="overview" class="section">
+        <div class="container grid-2">
+          <div>
+            <h2>What is purple?</h2>
+            <p>Purple is a perceived color created by combining light that stimulates both our red- and blue‑sensitive cones. Unlike violet—which is a spectral color at around 380–450 nm—purple is <em>non‑spectral</em>, existing only as a mixture of wavelengths.</p>
+            <p>That unique origin gives purple its dual nature: energetic yet contemplative, luxurious yet mysterious.</p>
+          </div>
+          <div class="card note">
+            <h3>Violet vs. Purple</h3>
+            <p><strong>Violet</strong> is a spectral color. <strong>Purple</strong> is a mix of red and blue/violet. Our brains synthesize purple when both the L (red) and S (blue) cones are significantly activated while M (green) input is lower.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="science" class="section alt">
+        <div class="container grid-2">
+          <div>
+            <h2>The science of purple</h2>
+            <ul class="checklist">
+              <li>Non‑spectral color perceived from combined wavelengths</li>
+              <li>Strong activation of long‑ and short‑wavelength cones</li>
+              <li>Often represented with HSL hues around 260°–300°</li>
+              <li>Used to encode high‑energy phenomena in astronomy imagery</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Design tip</h3>
+            <p>Purples with higher saturation feel bold and futuristic. Lower‑saturation purples read as calm and sophisticated. Lightness has the biggest impact on accessibility—test contrast!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="history" class="section">
+        <div class="container">
+          <h2>History & culture</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <h3>Tyrian purple</h3>
+              <p>Extracted from <em>Murex</em> sea snails in antiquity, Tyrian purple was extraordinarily costly, making it a symbol of power in Phoenicia, Rome, and Byzantium.</p>
+            </article>
+            <article class="timeline-item">
+              <h3>Mauveine</h3>
+              <p>In 1856, William Henry Perkin discovered the first synthetic aniline dye—<em>mauveine</em>—sparking the modern chemical dye industry and democratizing purple garments.</p>
+            </article>
+            <article class="timeline-item">
+              <h3>Modern symbolism</h3>
+              <p>Purple often signals creativity, luxury, spirituality, and individuality—from branding to UI themes and pop culture.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="psychology" class="section alt">
+        <div class="container grid-2">
+          <div>
+            <h2>Psychology & usage</h2>
+            <p>Purple can feel imaginative and premium. Darker purples communicate elegance; lighter purples (lavender, lilac) feel gentle and approachable. In interfaces, pair purples with ample whitespace and a neutral gray scale.</p>
+          </div>
+          <div class="card">
+            <h3>Accessibility</h3>
+            <p>Always check color contrast for text and controls. The Purple Lab below shows contrast against white and near‑black to guide safe choices.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="shades" class="section">
+        <div class="container">
+          <h2>Curated shades of purple</h2>
+          <p class="section-sub">A quick gallery of popular purples—generated with HSL and displayed with their HEX codes.</p>
+          <div id="shadesGrid" class="shades-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="lab" class="section lab-section alt">
+        <div class="container">
+          <h2>Purple Lab</h2>
+          <p class="section-sub">Tune hue, saturation, and lightness. Copy the HEX and check contrast instantly.</p>
+          <div class="lab">
+            <div class="lab-controls">
+              <label class="slider">
+                <div class="label-row">
+                  <span>Hue</span>
+                  <output id="hVal">280°</output>
+                </div>
+                <input id="hue" type="range" min="260" max="300" value="280" step="1" aria-label="Hue">
+              </label>
+              <label class="slider">
+                <div class="label-row">
+                  <span>Saturation</span>
+                  <output id="sVal">70%</output>
+                </div>
+                <input id="sat" type="range" min="0" max="100" value="70" step="1" aria-label="Saturation">
+              </label>
+              <label class="slider">
+                <div class="label-row">
+                  <span>Lightness</span>
+                  <output id="lVal">50%</output>
+                </div>
+                <input id="light" type="range" min="0" max="100" value="50" step="1" aria-label="Lightness">
+              </label>
+            </div>
+            <div class="lab-preview">
+              <div id="swatch" class="swatch" role="img" aria-label="Color preview"></div>
+              <div class="readout">
+                <code id="hslText">hsl(280, 70%, 50%)</code>
+                <code id="hexText">#7a2cf0</code>
+                <button id="copyHex" class="button small">Copy HEX</button>
+              </div>
+              <div class="contrast">
+                <div>
+                  <span class="dot on-white"></span>
+                  <span id="contrastWhite">—</span>
+                </div>
+                <div>
+                  <span class="dot on-black"></span>
+                  <span id="contrastBlack">—</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Made with ♥ for the color purple. <a href="#top">Back to top</a></p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
+
